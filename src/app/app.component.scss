@@ -1,0 +1,60 @@
+/* Ensure body does not overlap with the fixed navbar */
+body {
+    padding-top: 70px;
+    /* Adjust this based on navbar height */
+}
+
+/* Navbar Styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the card properly */
+.d-flex {
+
+}
+
+/* Ensure the card doesn't overlap with the navbar */
+.card {
+    max-width: 600px;
+    /* Adjust width as needed */
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    /* Prevent overlap with navbar */
+}
+
+/* Fix accordion expanding issue */
+.ngb-accordion {
+    width: 100%;
+}
+
+/* Ensure the accordion doesn't overflow */
+.ngb-accordion .ngb-accordion-body {
+    padding: 15px;
+}
+
+/* Prevent accordion from pushing content upwards */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust accordion buttons to be full width */
+button[ngbAccordionButton] {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Add spacing to sections */
+section {
+    padding: 20px 0;
+    width: 100%;
+}
