@@ -1,8 +1,5 @@
 /* Ensure body does not overlap with the fixed navbar */
-body {
-    padding-top: 70px;
-    /* Adjust this based on navbar height */
-}
+body {}
 
 /* Navbar Styling */
 .navbar {
@@ -11,15 +8,37 @@ body {
     width: 100%;
     z-index: 1050;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    /* Dark gray */
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar .nav-link {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: #ff5b50;
+    /* Lighter red hover effect */
 }
 
 /* Center the card properly */
 .d-flex {
-
+    background-color: #f2504b;
+    /* Adjusted lighter red */
 }
 
 /* Ensure the card doesn't overlap with the navbar */
 .card {
+    background-color: #f2504b;
+    /* Adjusted lighter red */
+    color: white;
+    /* Keeps text readable */
     max-width: 600px;
     /* Adjust width as needed */
     width: 100%;
@@ -36,6 +55,41 @@ body {
 /* Ensure the accordion doesn't overflow */
 .ngb-accordion .ngb-accordion-body {
     padding: 15px;
+}
+
+/* Accordion Header Background & Text */
+.accordion-button {
+    background-color: #333;
+    /* Dark Gray */
+    color: white;
+    border: none;
+}
+
+.accordion-button:hover,
+.accordion-button:focus {
+    background-color: #444;
+    /* Slightly lighter gray for hover effect */
+    color: #ff5b50;
+    /* Light red hover */
+}
+
+/* Accordion Opened (Active) State */
+.accordion-button:not(.collapsed) {
+    background-color: #444;
+    /* Deep Red */
+    color: white;
+}
+
+/* Accordion Content Background */
+.accordion-body {
+    background-color: #222;
+    /* Slightly darker gray */
+    color: white;
+}
+
+/* Accordion Border Removal */
+.accordion-item {
+    border: none;
 }
 
 /* Prevent accordion from pushing content upwards */
@@ -57,4 +111,14 @@ button[ngbAccordionButton] {
 section {
     padding: 20px 0;
     width: 100%;
+}
+
+.strongman-img {
+    max-width: 100%;
+    /* Prevents overflow */
+    height: auto;
+    /* Keeps aspect ratio */
+    display: block;
+    margin: 20px auto;
+    /* Centers image */
 }
