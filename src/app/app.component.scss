@@ -132,7 +132,7 @@ section {
     /* Adjusted lighter red */
     color: black;
     text-align: left;
-    max-width: 400px;
+    max-width: 100%;
     margin: 20px auto;
     padding: 20px;
     background: white;
@@ -152,10 +152,13 @@ label {
 
 input,
 textarea {
-    width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+#firstName, #lastName, #phone, #description {
+    width: 100%;
 }
 
 small {

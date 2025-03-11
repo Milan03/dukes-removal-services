@@ -125,7 +125,7 @@
               <label>Services Requested*</label>
               <div *ngFor="let service of services">
                 <input type="checkbox" [value]="service" (change)="toggleService(service, $event)">
-                <p>{{ service }}</p>
+                {{ service }}
               </div>
             </div>
 
