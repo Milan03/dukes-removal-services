@@ -2,6 +2,7 @@
 package-lock.json
 # Ignore backend dependencies
 server/node_modules/
+.env
 
 # Compiled output
 /dist
