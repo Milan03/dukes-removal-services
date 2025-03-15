@@ -13,6 +13,12 @@ export class AppComponent {
   activeSection = 'home';
   contactForm: FormGroup;
 
+  socialLinks = [
+    { name: 'Facebook', icon: 'bi-facebook', url: 'https://facebook.com/yourpage' },
+    { name: 'Instagram', icon: 'bi-instagram', url: 'https://instagram.com/yourpage' },
+    { name: 'Twitter', icon: 'bi-twitter', url: 'https://twitter.com/yourpage' }
+  ];
+
   services = [
     "Dump Runs",
     "Yard Clean Up",

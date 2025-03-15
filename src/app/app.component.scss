@@ -140,20 +140,23 @@ section {
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-}   
+}
 
 .email-link {
-    color: black; /* Matches a dark background */
+    color: black;
+    /* Matches a dark background */
     font-weight: bold;
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
+    /* Removes underline */
     transition: color 0.3s ease-in-out;
-  }
-  
-  .email-link:hover {
-    color: blue; /* Light red on hover */
+}
+
+.email-link:hover {
+    color: blue;
+    /* Light red on hover */
     text-decoration: underline;
-  }
-  
+}
+
 
 .contact-form {
     background-color: #f2504b;
@@ -185,7 +188,10 @@ textarea {
     border-radius: 5px;
 }
 
-#firstName, #lastName, #phone, #description {
+#firstName,
+#lastName,
+#phone,
+#description {
     width: 100%;
 }
 
@@ -207,4 +213,23 @@ button {
 button:disabled {
     background: gray;
     cursor: not-allowed;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: white;
+    /* Matches the theme */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #ff0000;;
+    /* Light red hover effect */
 }
