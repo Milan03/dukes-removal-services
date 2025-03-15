@@ -32,12 +32,27 @@ export class AppComponent {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
-      phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]], // Must be 10-digit number
+      contactMethod: ['phone', Validators.required], // Default to Phone
+      phone: ['', [Validators.pattern(/^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/)]], // Validates multiple formats
+      email: ['', [Validators.email]], // Email validation
       servicesRequested: this.fb.array([]), // Stores selected services
-      description: [''] // Optional
+      description: ['']
+    });
+
+    // Listen for changes in contactMethod and update validation dynamically
+    this.contactForm.get('contactMethod')?.valueChanges.subscribe((method) => {
+      if (method === 'phone') {
+        this.contactForm.get('phone')?.setValidators([Validators.required, Validators.pattern(/^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/)]);
+        this.contactForm.get('email')?.clearValidators();
+      } else {
+        this.contactForm.get('email')?.setValidators([Validators.required, Validators.email]);
+        this.contactForm.get('phone')?.clearValidators();
+      }
+      this.contactForm.get('phone')?.updateValueAndValidity();
+      this.contactForm.get('email')?.updateValueAndValidity();
     });
   }
-
+  
   // Method to handle service selection
   toggleService(service: string, event: any) {
     const servicesArray = this.contactForm.controls['servicesRequested'].value;

@@ -99,55 +99,81 @@
         <div class="contact-info">
           <h4>Address: 1234 Duke St, St. John's, NL</h4>
           <h4>Phone Number: 709-123-1234</h4>
-          <h4>Email: <a href="mailto:email.address@emailservice.com" class="email-link">email.address&#64;emailservice.com</a></h4>
+          <h4>Email: <a href="mailto:email.address@emailservice.com"
+              class="email-link">email.address&#64;emailservice.com</a></h4>
         </div>
-        <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form">
-          <h4 class="text-center">Or use the form below: </h4>
-          <div class="form-group">
-            <label for="firstName">First Name*</label>
-            <input id="firstName" type="text" formControlName="firstName" required>
-            <small *ngIf="contactForm.controls['firstName'].invalid && contactForm.controls['firstName'].touched">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form p-4">
+          <h4 class="text-center mb-4">Or use the form below:</h4>
+
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name*</label>
+            <input id="firstName" type="text" class="form-control" formControlName="firstName" required>
+            <small class="text-danger"
+              *ngIf="contactForm.controls['firstName'].invalid && contactForm.controls['firstName'].touched">
               First name is required (min 2 characters).
             </small>
           </div>
 
-          <div class="form-group">
-            <label for="lastName">Last Name*</label>
-            <input id="lastName" type="text" formControlName="lastName" required>
-            <small *ngIf="contactForm.controls['lastName'].invalid && contactForm.controls['lastName'].touched">
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name*</label>
+            <input id="lastName" type="text" class="form-control" formControlName="lastName" required>
+            <small class="text-danger"
+              *ngIf="contactForm.controls['lastName'].invalid && contactForm.controls['lastName'].touched">
               Last name is required (min 2 characters).
             </small>
           </div>
 
-          <div class="form-group">
-            <label for="phone">Callback Phone Number*</label>
-            <input id="phone" type="tel" formControlName="phone" required>
-            <small *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched">
-              Enter a valid 10-digit phone number.
+          <!-- Preferred Contact Method Dropdown -->
+          <div class="mb-3">
+            <label for="contactMethod" class="form-label">Preferred Contact Method*</label>
+            <select id="contactMethod" class="form-select" formControlName="contactMethod">
+              <option value="phone">Phone</option>
+              <option value="email">Email</option>
+            </select>
+          </div>
+
+          <!-- Show Phone Number Field if "Phone" is Selected -->
+          <div class="mb-3" *ngIf="contactForm.controls['contactMethod'].value === 'phone'">
+            <label for="phone" class="form-label">Phone Number*</label>
+            <input id="phone" type="tel" class="form-control" formControlName="phone">
+            <small class="text-danger"
+              *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched">
+              Enter a valid phone number (e.g., 123-456-7890, (123) 456-7890, or 1234567890).
             </small>
           </div>
 
-          <div class="form-group">
-            <label>Services Requested*</label>
-            <div *ngFor="let service of services">
-              <input type="checkbox" [value]="service" (change)="toggleService(service, $event)">
-              {{ service }}
+          <!-- Show Email Field if "Email" is Selected -->
+          <div class="mb-3" *ngIf="contactForm.controls['contactMethod'].value === 'email'">
+            <label for="email" class="form-label">Email Address*</label>
+            <input id="email" type="email" class="form-control" formControlName="email">
+            <small class="text-danger"
+              *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">
+              Enter a valid email address.
+            </small>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Services Requested*</label>
+            <div *ngFor="let service of services" class="form-check">
+              <input type="checkbox" class="form-check-input" [value]="service"
+                (change)="toggleService(service, $event)">
+              <label class="form-check-label">{{ service }}</label>
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="description">Description (Optional)</label>
-            <textarea id="description" formControlName="description" rows="3"></textarea>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description (Optional)</label>
+            <textarea id="description" class="form-control" formControlName="description" rows="3"></textarea>
           </div>
 
-          <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+          <button type="submit" class="btn btn-dark w-100" [disabled]="contactForm.invalid">Submit</button>
         </form>
-        
+
         <div class="social-links mt-4">
           <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" class="social-icon">
             <i class="bi" [ngClass]="link.icon"></i>
           </a>
-        </div>        
+        </div>
       </section>
     </div>
   </div>
