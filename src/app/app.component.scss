@@ -142,6 +142,19 @@ section {
     text-align: left;
 }   
 
+.email-link {
+    color: black; /* Matches a dark background */
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .email-link:hover {
+    color: blue; /* Light red on hover */
+    text-decoration: underline;
+  }
+  
+
 .contact-form {
     background-color: #f2504b;
     /* Adjusted lighter red */
