@@ -1,7 +1,9 @@
 import { Component, HostListener } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { NgbNavModule, NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +30,7 @@ export class AppComponent {
     "Backyard Pet Clean-up"
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
@@ -65,13 +67,18 @@ export class AppComponent {
   }
 
   // Handle form submission
-  submitForm() {
+  async submitForm() {
     if (this.contactForm.valid) {
-      console.log("Form Submitted Successfully:", this.contactForm.value);
-      alert("Thank you! We will get back to you soon.");
-      this.contactForm.reset(); // Reset after submission
-    } else {
-      alert("Please fill in all required fields correctly.");
+      try {
+        const response = await firstValueFrom(
+          this.http.post('http://localhost:5000/send-email', this.contactForm.value)
+        );
+        console.log('Email sent successfully!', response);
+        alert('Email sent successfully!');
+      } catch (error) {
+        console.error('Error sending email:', error);
+        alert('Error sending email.');
+      }
     }
   }
 
