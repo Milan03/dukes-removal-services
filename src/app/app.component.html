@@ -1,180 +1,216 @@
 <nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Duke's Removal</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+    <div class="container">
+        <a class="navbar-brand" href="#">Duke's Removal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
 <div id="home" class="d-flex justify-content-center align-items-center">
-  <div class="card border-0 text-center">
-    <div class="card-body">
-      <section>
-        <h1 class="card-title">Welcome to Duke's Removal Services</h1>
-        <p class="card-text">We handle everything from dump runs to moving services.</p>
-        <img src="assets/strongman.png" alt="Strongman lifting heavy objects" class="strongman-img">
-      </section>
-      <section id="services">
-        <h2>Our Services</h2>
-        <div ngbAccordion #acc="ngbAccordion" activeId="0">
-          <div ngbAccordionItem id="dump-runs">
-            <h2 ngbAccordionHeader>
-              <button ngbAccordionButton>Dump Runs</button>
-            </h2>
-            <div ngbAccordionCollapse>
-              <div ngbAccordionBody>
-                <ng-template>We help with dump runs and junk removal services.</ng-template>
-              </div>
-            </div>
-          </div>
+    <div class="card border-0 text-center">
+        <div class="card-body">
+            <section>
+                <h1 class="card-title">Welcome to Duke's Removal Services</h1>
+                <p class="card-text">We handle everything from dump runs to moving services.</p>
+                <img src="assets/strongman.png" alt="Strongman lifting heavy objects" class="strongman-img">
+            </section>
+            <section id="services">
+                <h2>Our Services</h2>
+                <div ngbAccordion #acc="ngbAccordion" activeId="0">
+                    <div ngbAccordionItem id="dump-runs">
+                        <h2 ngbAccordionHeader>
+                            <button ngbAccordionButton>Dump Runs</button>
+                        </h2>
+                        <div ngbAccordionCollapse>
+                            <div ngbAccordionBody>
+                                <ng-template>We help with dump runs and junk removal services.</ng-template>
+                            </div>
+                        </div>
+                    </div>
 
-          <div ngbAccordionItem id="yard-cleanup">
-            <h2 ngbAccordionHeader>
-              <button ngbAccordionButton>Yard Clean Up</button>
-            </h2>
-            <div ngbAccordionCollapse>
-              <div ngbAccordionBody>
-                <ng-template>We clear leaves, debris, and unwanted yard waste.</ng-template>
-              </div>
-            </div>
-          </div>
+                    <div ngbAccordionItem id="yard-cleanup">
+                        <h2 ngbAccordionHeader>
+                            <button ngbAccordionButton>Yard Clean Up</button>
+                        </h2>
+                        <div ngbAccordionCollapse>
+                            <div ngbAccordionBody>
+                                <ng-template>We clear leaves, debris, and unwanted yard waste.</ng-template>
+                            </div>
+                        </div>
+                    </div>
 
-          <div ngbAccordionItem id="heavy-lifting">
-            <h2 ngbAccordionHeader>
-              <button ngbAccordionButton>Heavy Lifting Around the House</button>
-            </h2>
-            <div ngbAccordionCollapse>
-              <div ngbAccordionBody>
-                <ng-template>Need help moving heavy objects? We’ve got you covered.</ng-template>
-              </div>
-            </div>
-          </div>
+                    <div ngbAccordionItem id="heavy-lifting">
+                        <h2 ngbAccordionHeader>
+                            <button ngbAccordionButton>Heavy Lifting Around the House</button>
+                        </h2>
+                        <div ngbAccordionCollapse>
+                            <div ngbAccordionBody>
+                                <ng-template>Need help moving heavy objects? We’ve got you covered.</ng-template>
+                            </div>
+                        </div>
+                    </div>
 
-          <div ngbAccordionItem id="furniture-removal">
-            <h2 ngbAccordionHeader>
-              <button ngbAccordionButton>Furniture Removal</button>
-            </h2>
-            <div ngbAccordionCollapse>
-              <div ngbAccordionBody>
-                <ng-template>We remove and dispose of unwanted furniture.</ng-template>
-              </div>
-            </div>
-          </div>
+                    <div ngbAccordionItem id="furniture-removal">
+                        <h2 ngbAccordionHeader>
+                            <button ngbAccordionButton>Furniture Removal</button>
+                        </h2>
+                        <div ngbAccordionCollapse>
+                            <div ngbAccordionBody>
+                                <ng-template>We remove and dispose of unwanted furniture.</ng-template>
+                            </div>
+                        </div>
+                    </div>
 
-          <div ngbAccordionItem id="moving-services">
-            <h2 ngbAccordionHeader>
-              <button ngbAccordionButton>Moving Services</button>
-            </h2>
-            <div ngbAccordionCollapse>
-              <div ngbAccordionBody>
-                <ng-template>We assist with local and long-distance moving.</ng-template>
-              </div>
-            </div>
-          </div>
+                    <div ngbAccordionItem id="moving-services">
+                        <h2 ngbAccordionHeader>
+                            <button ngbAccordionButton>Moving Services</button>
+                        </h2>
+                        <div ngbAccordionCollapse>
+                            <div ngbAccordionBody>
+                                <ng-template>We assist with local and long-distance moving.</ng-template>
+                            </div>
+                        </div>
+                    </div>
 
-          <div ngbAccordionItem id="pet-cleanup">
-            <h2 ngbAccordionHeader>
-              <button ngbAccordionButton>Backyard Pet Clean-up</button>
-            </h2>
-            <div ngbAccordionCollapse>
-              <div ngbAccordionBody>
-                <ng-template>We clean and sanitize your backyard pet area.</ng-template>
-              </div>
-            </div>
-          </div>
+                    <div ngbAccordionItem id="pet-cleanup">
+                        <h2 ngbAccordionHeader>
+                            <button ngbAccordionButton>Backyard Pet Clean-up</button>
+                        </h2>
+                        <div ngbAccordionCollapse>
+                            <div ngbAccordionBody>
+                                <ng-template>We clean and sanitize your backyard pet area.</ng-template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <h4>Address: 1234 Duke St, St. John's, NL</h4>
+                    <h4>Phone Number: 709-123-1234</h4>
+                    <h4>Email: <a href="mailto:email.address@emailservice.com"
+                            class="email-link">email.address&#64;emailservice.com</a></h4>
+                </div>
+                <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form p-4">
+                    <h4 class="text-center mb-4">Or use the form below:</h4>
+
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name*</label>
+                        <input id="firstName" type="text" class="form-control" formControlName="firstName" required>
+                        <small class="text-danger"
+                            *ngIf="contactForm.controls['firstName'].invalid && contactForm.controls['firstName'].touched">
+                            First name is required (min 2 characters).
+                        </small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name*</label>
+                        <input id="lastName" type="text" class="form-control" formControlName="lastName" required>
+                        <small class="text-danger"
+                            *ngIf="contactForm.controls['lastName'].invalid && contactForm.controls['lastName'].touched">
+                            Last name is required (min 2 characters).
+                        </small>
+                    </div>
+
+                    <!-- Preferred Contact Method Dropdown -->
+                    <div class="mb-3">
+                        <label for="contactMethod" class="form-label">Preferred Contact Method*</label>
+                        <select id="contactMethod" class="form-select" formControlName="contactMethod">
+                            <option value="phone">Phone</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+
+                    <!-- Show Phone Number Field if "Phone" is Selected -->
+                    <div class="mb-3" *ngIf="contactForm.controls['contactMethod'].value === 'phone'">
+                        <label for="phone" class="form-label">Phone Number*</label>
+                        <input id="phone" type="tel" class="form-control" formControlName="phone">
+                        <small class="text-danger"
+                            *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched">
+                            Enter a valid phone number (e.g., 123-456-7890, (123) 456-7890, or 1234567890).
+                        </small>
+                    </div>
+
+                    <!-- Show Email Field if "Email" is Selected -->
+                    <div class="mb-3" *ngIf="contactForm.controls['contactMethod'].value === 'email'">
+                        <label for="email" class="form-label">Email Address*</label>
+                        <input id="email" type="email" class="form-control" formControlName="email">
+                        <small class="text-danger"
+                            *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">
+                            Enter a valid email address.
+                        </small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Services Requested*</label>
+                        <div *ngFor="let service of services" class="form-check">
+                            <input type="checkbox" class="form-check-input" [value]="service"
+                                (change)="toggleService(service, $event)">
+                            <label class="form-check-label">{{ service }}</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description (Optional)</label>
+                        <textarea id="description" class="form-control" formControlName="description"
+                            rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark w-100" [disabled]="contactForm.invalid">Submit</button>
+                </form>
+
+
+            </section>
+
+
         </div>
 
-      </section>
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info">
-          <h4>Address: 1234 Duke St, St. John's, NL</h4>
-          <h4>Phone Number: 709-123-1234</h4>
-          <h4>Email: <a href="mailto:email.address@emailservice.com"
-              class="email-link">email.address&#64;emailservice.com</a></h4>
-        </div>
-        <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form p-4">
-          <h4 class="text-center mb-4">Or use the form below:</h4>
-
-          <div class="mb-3">
-            <label for="firstName" class="form-label">First Name*</label>
-            <input id="firstName" type="text" class="form-control" formControlName="firstName" required>
-            <small class="text-danger"
-              *ngIf="contactForm.controls['firstName'].invalid && contactForm.controls['firstName'].touched">
-              First name is required (min 2 characters).
-            </small>
-          </div>
-
-          <div class="mb-3">
-            <label for="lastName" class="form-label">Last Name*</label>
-            <input id="lastName" type="text" class="form-control" formControlName="lastName" required>
-            <small class="text-danger"
-              *ngIf="contactForm.controls['lastName'].invalid && contactForm.controls['lastName'].touched">
-              Last name is required (min 2 characters).
-            </small>
-          </div>
-
-          <!-- Preferred Contact Method Dropdown -->
-          <div class="mb-3">
-            <label for="contactMethod" class="form-label">Preferred Contact Method*</label>
-            <select id="contactMethod" class="form-select" formControlName="contactMethod">
-              <option value="phone">Phone</option>
-              <option value="email">Email</option>
-            </select>
-          </div>
-
-          <!-- Show Phone Number Field if "Phone" is Selected -->
-          <div class="mb-3" *ngIf="contactForm.controls['contactMethod'].value === 'phone'">
-            <label for="phone" class="form-label">Phone Number*</label>
-            <input id="phone" type="tel" class="form-control" formControlName="phone">
-            <small class="text-danger"
-              *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched">
-              Enter a valid phone number (e.g., 123-456-7890, (123) 456-7890, or 1234567890).
-            </small>
-          </div>
-
-          <!-- Show Email Field if "Email" is Selected -->
-          <div class="mb-3" *ngIf="contactForm.controls['contactMethod'].value === 'email'">
-            <label for="email" class="form-label">Email Address*</label>
-            <input id="email" type="email" class="form-control" formControlName="email">
-            <small class="text-danger"
-              *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">
-              Enter a valid email address.
-            </small>
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Services Requested*</label>
-            <div *ngFor="let service of services" class="form-check">
-              <input type="checkbox" class="form-check-input" [value]="service"
-                (change)="toggleService(service, $event)">
-              <label class="form-check-label">{{ service }}</label>
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="description" class="form-label">Description (Optional)</label>
-            <textarea id="description" class="form-control" formControlName="description" rows="3"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-dark w-100" [disabled]="contactForm.invalid">Submit</button>
-        </form>
-
-        <div class="social-links mt-4">
-          <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" class="social-icon">
-            <i class="bi" [ngClass]="link.icon"></i>
-          </a>
-        </div>
-      </section>
     </div>
-  </div>
+
 </div>
+<footer class="bg-dark text-white text-center text-lg-start py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-3 mb-lg-0">
+                <h5>Duke's Removal Services</h5>
+                <p>Reliable and professional removal services in St. John's and surrounding areas.</p>
+            </div>
+            <div class="col-lg-4 mb-3 mb-lg-0">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="text-white">Home</a></li>
+                    <li><a href="#services" class="text-white">Services</a></li>
+                    <li><a href="#contact" class="text-white">Contact</a></li>
+                </ul>
+                <div class="social-links mt-3">
+                    <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" class="social-icon me-2">
+                        <i class="bi fs-5" [ngClass]="link.icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h6>Contact & Social</h6>
+                <p class="mb-1">📍 1234 Duke St, St. John's, NL</p>
+                <p class="mb-1">📞 709-123-1234</p>
+                <p>✉️ <a href="mailto:email.address@emailservice.com"
+                        class="text-white">email.addressATemailservice.com</a></p>
+
+            </div>
+        </div>
+        <hr class="my-3">
+        <div class="text-center">
+            <small>&copy; 2025 Duke's Removal Services. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
